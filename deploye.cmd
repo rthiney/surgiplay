@@ -103,7 +103,8 @@ IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
 :: 3. Build application
 IF EXIST "%DEPLOYMENT_SOURCE%\angular-cli.json" (
   pushd "%DEPLOYMENT_SOURCE%"
-  call :ExecuteCmd node_modules\.bin\ng build --progress false --prod
+::  call :ExecuteCmd node_modules\.bin\ng build --progress false --prod
+ call :ExecuteCmd !NPM_CMD! run build
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
