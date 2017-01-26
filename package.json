@@ -1,7 +1,12 @@
 {
-  "name": "ng2-play",
+  "name": "surgipalsite",
   "version": "0.0.0",
   "license": "MIT",
+  "author": {
+     "name": "Raphael Thiney",
+     "email": "raphael@surgipal.com"
+
+  },
   "angular-cli": {},
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
@@ -15,6 +20,10 @@
     "e2e": "protractor"
   },
   "private": true,
+   "repository": {
+      "type": "git",
+       "url": "https://surgipalcode.visualstudio.com/Site/_git/Playground"
+   },
   "dependencies": {
 
     "@angular/common": "2.2.3",
