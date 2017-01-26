@@ -2,8 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import {Validators} from '@angular/forms';
 import {TodoItem} from '../shared';
-
-import { MdCheckboxChange } from '@angular/material';
+ 
 
 @Component({
   selector: 'app-todo',
@@ -43,7 +42,7 @@ export class TodoComponent implements OnInit {
     }
   }
 
-  toggleAll(changedEvent: MdCheckboxChange) {
+  toggleAll(changedEvent: any) {
     this.todos.forEach(function(todo) {
       todo.completed = changedEvent.checked;
     });

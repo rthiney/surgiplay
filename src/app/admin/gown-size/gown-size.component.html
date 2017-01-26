@@ -1,0 +1,63 @@
+  
+<!--
+<h2 class="header">Add {{ MetaAddTitle }}</h2>
+<div class="row">
+  <div class="row">
+    <div class="card horizontal col s6 hoverable">
+      <form class="col s12" id="form1">
+        <div class="card-image">
+          
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <div class="input-field ">
+              <i class="material-icons prefix"></i>
+              <input id="name" name="pname" [(ngModel)]="model.name" type="text" pattern="-?[0-9]*(\.[0-9]+)?" class="validate">
+              <label for="pname" data-error="Alpha only" data-success="Correct!">{{ MetaAddPrompt }}</label>
+            </div>
+          </div>
+          <div class="card-action">
+               <button class="btn-floating btn-small waves-effect waves-light indigo" (click)="onSubmit()"><i class="material-icons left">add</i>Add</button>
+                <button class="btn-floating btn-small waves-effect waves-light orange" (click)="onSubmit()"><i class="material-icons left">add</i>Add</button>
+         
+            <button class="btn-floating btn-small waves-effect waves-light" (click)="onSubmit()"><i class="material-icons left">add</i>Add</button>
+            <button class="waves-effect waves-light btn" (click)="$(form1).reset()"> Cancel</button>
+            <!--<a class="btn-floating btn-small waves-effect waves-light green" (click)="onSubmit"><i class="material-icons left">add</i></a>
+                 <a class="btn-floating btn-small waves-effect waves-light red" (click)="onDelete(person.id)"><i class="material-icons left">remove</i></a>
+            -->   <!--
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="card horizontal col s6">
+     
+        <div class="card-image">
+      
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+ 
+            <table class="highlight responsive-table">
+              <thead>
+                <th>Name</th>
+                <th>Actions</th>
+                <th></th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let person of planetsList">
+                  <td>
+                    <input type="text" [(ngModel)]="person.name" name="person.name"  /></td>
+                  <td>
+                    <button class="btn-floating btn-small waves-effect waves-light green btn-flat" (click)="onUpdate(person)"><i class="material-icons small left">add</i></button>
+                    <button class="btn-floating btn-small waves-effect waves-light red" (click)="onDelete(person.id)"><i class="material-icons small left">remove</i></button>
+                </tr>
+                <tbody>
+            </table> 
+          </div>
+          <div class="card-action">
+          </div>
+        </div>
+     
+    </div>
+  </div>
+</div>-->

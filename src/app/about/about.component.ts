@@ -3,33 +3,22 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-about',
-  template: `
-    <md-card>
-       <h2 md-line>About page</h2>
-       <p>Router param passed to page is: {{id}}</p>
-      <h2 md-line>Source code on Github</h2>
-      <p>
-        This app is built throughout a series of screencasts, 
-        source code can be found at 
-        <a href="https://github.com/ajtowf/ng2_play/" target="_blank">
-          https://github.com/ajtowf/ng2_play/
-        </a>	
-      </p>
-      <h2 md-line>Youtube</h2>
-      <p>
-        For screencast on the latest and greates tech from web development, check out my youtube channel  
-        <a href="https://www.youtube.com/c/AjdenTowfeek" target="_blank">
-          https://www.youtube.com/c/AjdenTowfeek
-        </a>	
-      </p>
-      <h2 md-line>Twitter</h2>
-      <p>
-        And make sure to follow me on twitter to stay tuned   
-        <a href="https://twitter.com/ajtowf" target="_blank">
-          https://twitter.com/ajtowf
-        </a>	
-      </p>  
-    </md-card>
+  template: `  <div class="col s12 m7">
+    <h2 class="header">About</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="http://lorempixel.com/100/190/business/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>SurgiPal was formed in 2013</p>
+        </div>
+        <div class="card-action">
+          <a href="/hpme">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
   `
 })
 export class AboutComponent implements OnInit {

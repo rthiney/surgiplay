@@ -1,37 +1,67 @@
+ 
+import { AuthGuard } from './shared/auth-guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
-import { MaterialModule } from '@angular/material';
+ import { AuthHttp, AuthConfig } from 'angular2-jwt'; 
+import {MaterializeDirective} from 'angular2-materialize';
+ 
+import { AppRoutingModule } from './app-routing.module'; 
+ import { AppComponent } from './app.component';
 
-import { AppComponent } from './app.component';
-import { Ng2PlayRoutingModule } from './app-routing.module';
-
-import { HomeComponent } from './home';
-import { TodoComponent } from './todo';
 import { AboutComponent } from './about';
-import { ProfileComponent } from './profile';
-import { MaterialComponent } from './material/material.component';
+import { ProfileComponent } from './profile'; 
+import { GloveSizeComponent, GownSizeComponent } from './admin';
+import { NoContentComponent } from './no-content';
+import { HomeComponent } from './home';
+import { StaffComponent } from './staff/staff.component';
+import { HospitalsComponent } from './hospitals/hospitals.component';
+import { SurgeriesComponent } from './surgeries/surgeries.component';
+import { PrefCardComponent } from './pref-card/pref-card.component';
+import { GloveSize, GownSize } from './models';
+import { GloveSizeService } from './admin/glove-size/glove-size.service';
+import { GownSizeService } from './admin/gown-size/gown-size.service';
 
-import { AuthHttp, AuthConfig } from 'angular2-jwt';
-import { AuthGuard } from './auth-guard';
+
+//Shared
+import { ParamDropdownComponent } from './shared/components/parameters.component';
+
 import { DataService } from './shared';
 
+
+//PRIMNG
+// import {MomentModule} from 'angular2-moment';
+//  import {TooltipModule} from 'primeng/primeng';
+//  import {CalendarModule} from 'primeng/primeng'; 
 @NgModule({
   declarations: [
+      MaterializeDirective,
     AppComponent,
-    HomeComponent,
-    TodoComponent,
+    HomeComponent, 
     AboutComponent,
-    ProfileComponent,
-    MaterialComponent
+    ProfileComponent, 
+     GloveSizeComponent,
+    GownSizeComponent, 
+    ParamDropdownComponent,
+    HomeComponent,
+    NoContentComponent,
+    StaffComponent,
+    HospitalsComponent,
+    SurgeriesComponent,
+    PrefCardComponent,
+    GloveSizeComponent,
+  GownSizeComponent
+
   ],
   imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    HttpModule,
-    MaterialModule.forRoot(),
-    Ng2PlayRoutingModule
+    BrowserModule, 
+    FormsModule,
+    HttpModule, 
+    //     MomentModule,
+    // TooltipModule,
+    // CalendarModule,
+    AppRoutingModule 
   ],
   providers: [
     {
@@ -43,7 +73,8 @@ import { DataService } from './shared';
     },
     AuthHttp,
     AuthGuard,
-    DataService
+    DataService,
+    GloveSizeService, GownSizeService
   ],
   bootstrap: [AppComponent]
 })

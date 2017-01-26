@@ -1,15 +1,17 @@
+ 
 import { Component, NgZone } from '@angular/core';
 import { Location } from '@angular/common';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
 import { Router } from '@angular/router';
-import { Auth }              from './shared/auth.service'; 
+import { Auth }              from './shared/auth.service';  
+ import {MaterializeDirective} from 'angular2-materialize';
 declare var Auth0Lock;
 
 @Component({
   selector: 'app-root',
-      providers: [ Auth ],
+ providers: [ Auth ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   lock = new Auth0Lock('HWaGPswDnLy5BUO4DyJbNWCBfG5VqkCp', 'surgipal.auth0.com');

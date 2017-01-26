@@ -12,7 +12,7 @@ export class DataService {
   getSecretQuote(): Observable<string> {
     console.log(api.url);
     return this.authHttp
-      .get('http://localhost:3002/api/quote')
+      .get(api.url + '/api/GloveSizes')
       .map(res => res.json())
       .catch(this.handleError);
   }

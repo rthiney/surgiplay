@@ -1,22 +1,28 @@
-@import '~@angular/material/core/theming/all-theme';
 
-// NOTE: Theming is currently experimental and not yet publically released!
+@import "~materialize-css/sass/components/color"; /* This must be included to use the included variables and the color function */
+$primary-color: color("teal", "lighten-2") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
 
-@include md-core();
+$secondary-color: color("amber", "lighten-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;
+ 
 
-$primary: md-palette($md-deep-purple);
-$accent:  md-palette($md-amber, A200, A100, A400);
+$roboto-font-path: "~materialize-css/fonts/roboto/"; /* This is needed so the materialize.scss file can load the font */
+ 
+ @import "../node_modules/materialize-css/dist/css/materialize.css";
 
-$theme: md-light-theme($primary, $accent);
-
-@include angular-material-theme($theme);
-
-.m2app-dark {
-  $dark-primary: md-palette($md-pink, 700, 500, 900);
-  $dark-accent:  md-palette($md-blue-grey, A200, A100, A400);
-  $dark-warn:    md-palette($md-deep-orange);
-
-  $dark-theme: md-dark-theme($dark-primary, $dark-accent, $dark-warn);
-
-  @include angular-material-theme($dark-theme);
+h2{
+    color:$primary-color-dark;
 }
+ .sassTEST{
+     color:green;
+     font-size: 100px;
+ }
+body {
+  margin: 5;
+}
+
+  

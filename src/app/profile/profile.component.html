@@ -1,20 +1,27 @@
-<md-card>
-  <img src="{{profile.picture}}" style="width: 50px" /> {{profile.name}}
-   <h2 md-line>Chuck quote of the day</h2>
-   <p>{{quote}}</p>
-</md-card>
-<div *ngIf="auth.authenticated() && auth.userProfile">
-  <div class="row">
-    <div class="col-md-6">
-      <h3>Profile</h3>
-      <img  *ngIf="auth.userProfile.picture!=null" [src]="auth.userProfile.picture" alt="" class="profile-img">
-      <p><strong>Name: </strong> {{auth.userProfile.name}}</p>
-      <p><strong>Email: </strong> {{auth.userProfile.email}}</p>
-      <p><strong>Nickname: </strong> {{auth.userProfile.nickname}}</p>
-      <p><strong>Created At: </strong> {{auth.userProfile.created_at}}</p>
-      <p><strong>Updated At: </strong> {{auth.userProfile.updated_at}}</p>
-      <p><strong>Country (added by rule): </strong> {{auth.userProfile.country}}</p>
+ 
+<div class="row">
+  <div class="col s12 m7">
+    <div class="card z-depth-4 hoverable">
+      <div class="card-image">
+        <img src="{{auth.userProfile.picture}}" style="width: 50px" />
+        <span class="card-title top">{{auth.userProfile.name}}</span>
+      </div>
+      <div *ngIf="auth.authenticated() && auth.userProfile">
+        <div class="card-content">
+          <h3>Profile</h3>
+          <img *ngIf="auth.userProfile.picture!=null" [src]="auth.userProfile.picture" alt="" class="profile-img">
+          <p><strong>Name: </strong> {{auth.userProfile.name}}</p>
+          <p><strong>Email: </strong> {{auth.userProfile.email}}</p>
+          <p><strong>Nickname: </strong> {{auth.userProfile.nickname}}</p>
+          <p><strong>Created At: </strong> {{auth.userProfile.created_at}}</p>
+          <p><strong>Updated At: </strong> {{auth.userProfile.updated_at}}</p>
+          <p><strong>Country (added by rule): </strong> {{auth.userProfile.country}}</p>
+        </div>
+      </div>
+      <div class="card-action">
+        <a href="#">This is a link</a>
+      </div>
     </div>
   </div>
 </div>
-<h4 *ngIf="!auth.authenticated()">You are not logged in, please click 'Log in' button to login</h4>
+ 
