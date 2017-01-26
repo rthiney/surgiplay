@@ -1,28 +1,27 @@
-
-@import "~materialize-css/sass/components/color"; /* This must be included to use the included variables and the color function */
-$primary-color: color("teal", "lighten-2") !default;
+ 
+@import "assets/sass/components/color";  
+$primary-color: color("blue-grey", "lighten-2") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("amber", "lighten-1") !default;
+$secondary-color: color("pink", "lighten-1") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
  
 
-$roboto-font-path: "~materialize-css/fonts/roboto/"; /* This is needed so the materialize.scss file can load the font */
- 
- @import "../node_modules/materialize-css/dist/css/materialize.css";
+$roboto-font-path: "assets/fonts/roboto/";   
 
-h2{
-    color:$primary-color-dark;
-}
+ @import "assets/sass/materialize.scss";
+  /*
+ @import "../node_modules/materialize-css/dist/css/materialize.css";*/
  .sassTEST{
-     color:green;
+     color:red;
      font-size: 100px;
  }
-body {
-  margin: 5;
+ 
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
-  

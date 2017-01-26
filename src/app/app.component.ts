@@ -44,7 +44,7 @@ export class AppComponent {
       });
     });
   }
-
+ 
 //   login() {
 //     let self = this;
 //     this.lock.show((err: string, profile: string, id_token: string) => {

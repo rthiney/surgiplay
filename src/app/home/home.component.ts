@@ -5,12 +5,12 @@ import { toast   }  from 'angular2-materialize';
 @Component({
   selector: 'app-home', 
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'] 
+  styleUrls: ['./home.component.scss'] 
 })
 export class HomeComponent implements OnInit {
 
   ngOnInit() {
-    toast('...and Materialize works as well!',2000,'rounded');
+  //  toast('...and Materialize works as well!',2000,'rounded');
   }
 
 }
