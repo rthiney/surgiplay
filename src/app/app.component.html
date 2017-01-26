@@ -1,13 +1,24 @@
 <md-sidenav-layout [class.m2app-dark]="isDarkTheme">
 
   <md-sidenav #sidenav mode="side" class="app-sidenav">
-    Sidenav
+    <md-card  *ngIf="auth.authenticated()">
+  <img src="{{auth.userProfile.picture}}" style="width: 50px" /> 
+ 
+     <p><strong>Name: </strong> {{auth.userProfile.name}}</p>
+      <p><strong>Email: </strong> {{auth.userProfile.email}}</p>
+      <p><strong>Nickname: </strong> {{auth.userProfile.nickname}}</p>
+      <p><strong>Created At: </strong> {{auth.userProfile.created_at}}</p>
+      <p><strong>Updated At: </strong> {{auth.userProfile.updated_at}}</p>
+      <p><strong>Country (added by rule): </strong> {{auth.userProfile.country}}</p> 
+      <h6>{{ auth.idToken }} </h6>
+         {{ auth.userProfile.global_client_id }}
+ </md-card>
   </md-sidenav>
 
   <md-toolbar color="primary">
     <button class="app-icon-button" (click)="sidenav.toggle()">
       <i class="material-icons app-toolbar-menu">menu</i>
-    </button> ng2play&nbsp;
+    </button>SurgiPal
 
     <button md-button [routerLink]="['/']">Home</button>
     <button md-button [routerLink]="['/about', 'Hello, world!']">About</button>
@@ -15,9 +26,9 @@
     <span class="app-toolbar-filler"></span>
 
     <button md-button [routerLink]="['/material']">Material Demo</button>
-    <button md-button *ngIf="loggedIn()" [routerLink]="['/profile']">Profile</button>
-    <button md-button *ngIf="!loggedIn()" (click)="login()">Sign in</button>
-    <button md-button *ngIf="loggedIn()" (click)="logout()">Sign out</button>
+    <button md-button *ngIf="auth.authenticated()" [routerLink]="['/profile']">Profile</button>
+    <button md-button *ngIf="!auth.authenticated()" (click)="auth.login()">Sign in</button>
+    <button md-button *ngIf="auth.authenticated()" (click)="auth.logout()">Sign out</button>
 
     <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE THEME</button>
   </md-toolbar>

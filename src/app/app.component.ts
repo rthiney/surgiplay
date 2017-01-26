@@ -2,59 +2,82 @@ import { Component, NgZone } from '@angular/core';
 import { Location } from '@angular/common';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
 import { Router } from '@angular/router';
-
+import { Auth }              from './shared/auth.service'; 
 declare var Auth0Lock;
 
 @Component({
   selector: 'app-root',
+      providers: [ Auth ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  lock = new Auth0Lock('T1wdQrDposGW5BisaKViC0Cu9CuxtR0c', 'towfeek.eu.auth0.com');
-  jwtHelper: JwtHelper = new JwtHelper();
+  lock = new Auth0Lock('HWaGPswDnLy5BUO4DyJbNWCBfG5VqkCp', 'surgipal.auth0.com');
+  // jwtHelper: JwtHelper = new JwtHelper();
   isDarkTheme: boolean = false;
-
+  //Store profile object in auth class
+  userProfile: any;
   constructor(
+    private auth: Auth,
     private router: Router,
     private location: Location,
     private ngZone: NgZone) {
-  }
+ this.userProfile = JSON.parse(localStorage.getItem('profile'));
 
-  login() {
-    let self = this;
-    this.lock.show((err: string, profile: string, id_token: string) => {
-      if (err) {
-        throw new Error(err);
-      }
+    // Add callback for lock `authenticated` event
+    this.lock.on("authenticated", (authResult) => {
+      localStorage.setItem('id_token', authResult.idToken);
 
-      localStorage.setItem('profile', JSON.stringify(profile));
-      localStorage.setItem('id_token', id_token);
+      // Fetch profile information
+      this.lock.getProfile(authResult.idToken, (error, profile) => {
+        if (error) {
+          // Handle error
+          alert(error);
+          return;
+        }
 
-      console.log(
-        this.jwtHelper.decodeToken(id_token),
-        this.jwtHelper.getTokenExpirationDate(id_token),
-        this.jwtHelper.isTokenExpired(id_token)
-      );
-
-      self.ngZone.run(() => self.loggedIn());
-      self.router.navigate(['/profile']);
+        profile.user_metadata = profile.user_metadata || {};
+        localStorage.setItem('profile', JSON.stringify(profile));
+        this.userProfile = profile;
+      });
     });
   }
 
-  logout() {
-    localStorage.removeItem('profile');
-    localStorage.removeItem('id_token');
+//   login() {
+//     let self = this;
+//     this.lock.show((err: string, profile: string, id_token: string) => {
+//       if (err) {
+//         throw new Error(err);
+//       }
 
-    this.loggedIn();
-    this.router.navigate(['/']);
-  }
+//       localStorage.setItem('profile', JSON.stringify(profile));
+//       localStorage.setItem('id_token', id_token);
 
-  loggedIn() {
-    return tokenNotExpired();
-  }
+//       console.log(
+//         this.jwtHelper.decodeToken(id_token),
+//         this.jwtHelper.getTokenExpirationDate(id_token),
+//         this.jwtHelper.isTokenExpired(id_token)
+//       );
 
-  isActive(path) {
-    return this.location.path() === path;
-  }
+//       self.ngZone.run(() => self.loggedIn());
+//       self.router.navigate(['/profile']);
+//     });
+//   }
+
+//   logout() {
+//     localStorage.removeItem('profile');
+//     localStorage.removeItem('id_token');
+
+//     this.loggedIn();
+//     this.router.navigate(['/']);
+//   }
+
+ // loggedIn() {
+//     return tokenNotExpired();
+//   }
+
+//   isActive(path) {
+//     return this.location.path() === path;
+//   }
 }
+

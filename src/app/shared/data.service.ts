@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AuthHttp } from 'angular2-jwt';
 import { Observable } from 'rxjs/Observable';
+import { environment,api } from './../../environments/environment';
 import './rxjs-operators';
 
 @Injectable()
@@ -9,6 +10,7 @@ export class DataService {
   constructor(private authHttp: AuthHttp) {}
 
   getSecretQuote(): Observable<string> {
+    console.log(api.url);
     return this.authHttp
       .get('http://localhost:3002/api/quote')
       .map(res => res.json())
