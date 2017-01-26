@@ -4,14 +4,16 @@
   "license": "MIT",
   "author": {
      "name": "Raphael Thiney",
-     "email": "raphael@surgipal.com"
-
+     "email": "raphael@surgipal.com" 
+  },
+  "bugs": {
+    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
   },
   "angular-cli": {},
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "docker-build": "docker build -t ng2-quickstart .",
-    "docker": "npm run docker-build && docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-quickstart",
+    "docker-build": "docker build -t surgipalsite .",
+    "docker": "npm run docker-build && docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-surgipalsite",
     "start2": "ng serve",
     "build": "ng build",
     "lint": "tslint \"src/**/*.ts\"",
