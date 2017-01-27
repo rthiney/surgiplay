@@ -26,6 +26,10 @@
       "prod": "environments/environment.prod.ts"
     }
   }],
+  "assets": [
+  "assets",
+  "favicon.ico"
+],
   "addons": [],
   "packages": [],
   "e2e": {

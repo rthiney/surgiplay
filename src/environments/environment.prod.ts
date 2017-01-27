@@ -9,3 +9,14 @@ export const environment = {
 export const api = {
   url: 'http://surgiapi.azurewebsites.net/'
 };
+
+
+interface AuthConfiguration {
+    clientID: string,
+    domain: string
+}
+
+export const myConfig: AuthConfiguration = {
+    clientID: 'HWaGPswDnLy5BUO4DyJbNWCBfG5VqkCp',
+    domain: 'surgipal.auth0.com'
+};
