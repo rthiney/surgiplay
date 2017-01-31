@@ -1,85 +1,85 @@
 {
-  "name": "surgipalsite",
-  "version": "0.0.0",
-  "license": "MIT",
-  "author": {
-    "name": "Raphael Thiney",
-    "email": "raphael@surgipal.com"
-  },
-  "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
-  },
-  "engines": {
-    "node": "6.9.1",
-    "npm": "3.7.3"
-  },
-  "angular-cli": {},
-  "scripts": {
-    "start2": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "docker-build": "docker build -t surgipalsite .",
-    "docker": "npm run docker-build && docker run -it --rm -p 3000:3000 -p 3001:3001 surgipalsite",
-    "start": "ng serve -prod",
-    "build": "ng build",
-    "lint": "tslint \"src/**/*.ts\"",
-    "test": "ng test",
-    "pree2e": "webdriver-manager update",
-    "e2e": "protractor",
-    "startNode": "node ./node_modules/babel-cli/bin/babel-node.js index.js"
-  },
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://surgipalcode.visualstudio.com/Site/_git/Playground"
-  },
-  "dependencies": {
-    "@angular/common": "2.2.3",
-    "@angular/compiler": "2.2.3",
-    "@angular/core": "2.2.3",
-    "@angular/forms": "2.2.3",
-    "@angular/http": "2.2.3",
-    "@angular/platform-browser": "2.2.3",
-    "@angular/platform-browser-dynamic": "2.2.3",
-    "@angular/router": "3.2.3",
-    "angular-in-memory-web-api": "^0.1.17",
-    "angular2-jwt": "^0.1.24",
-    "angular2-materialize": "^6.3.0",
-    "angular2-moment": "^1.1.0",
-    "core-js": "^2.4.1",
-    "cors": "^2.8.1",
-    "express": "^4.14.0",
-    "express-jwt": "^5.1.0",
-    "jquery": "^2.2.4",
-    "materialize-css": "^0.97.8", 
-    "rxjs": "5.0.0-beta.12",
-    "ts-helpers": "^1.1.1",
-    "zone.js": "^0.6.23",
-           "@angular/compiler-cli": "2.2.3",
-         "angular-cli": "1.0.0-beta.22-1"
-  },
-  "devDependencies": {
-    "@angular/compiler-cli": "2.2.3",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.21",
-    "codelyzer": "~2.0.0-beta.1",
-    "concurrently": "^3.1.0",
-    "gulp": "^3.9.0",
-    "gulp-zip": "^3.0.2",
-    "http-server": "^0.9.0",
-    "jasmine-core": "2.5.2",
-    "jasmine-spec-reporter": "2.5.0",
-    "karma": "1.2.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-cli": "^1.0.1",
-    "karma-jasmine": "^1.0.2",
-    "karma-remap-istanbul": "^0.2.1",
-    "lite-server": "^2.2.0",
-    "minimist": "^1.2.0",
-    "node-sass": "^4.3.0",
-    "protractor": "4.0.9",
-    "ts-node": "1.2.1",
-    "tslint": "^4.0.2",
-    "typescript": "~2.0.3",
-    "webdriver-manager": "10.2.5"
-  }
+    "name": "surgipalsite",
+    "version": "0.0.0",
+    "license": "MIT",
+    "author": {
+        "name": "Raphael Thiney",
+        "email": "raphael@surgipal.com"
+    },
+    "bugs": {
+        "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
+    },
+    "engines": {
+        "node": "6.9.1",
+        "npm": "3.7.3"
+    },
+    "angular-cli": {},
+    "scripts": {
+        "start2": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+        "docker-build": "docker build -t surgipalsite .",
+        "docker": "npm run docker-build && docker run -it --rm -p 3000:3000 -p 3001:3001 surgipalsite",
+        "start": "ng serve -prod",
+        "build": "ng build",
+        "lint": "tslint \"src/**/*.ts\"",
+        "test": "ng test",
+        "pree2e": "webdriver-manager update",
+        "e2e": "protractor",
+        "startNode": "node ./node_modules/babel-cli/bin/babel-node.js index.js"
+    },
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://surgipalcode.visualstudio.com/Site/_git/Playground"
+    },
+    "dependencies": {
+        "@angular/common": "2.2.3",
+        "@angular/compiler": "2.2.3",
+        "@angular/core": "2.2.3",
+        "@angular/forms": "2.2.3",
+        "@angular/http": "2.2.3",
+        "@angular/platform-browser": "2.2.3",
+        "@angular/platform-browser-dynamic": "2.2.3",
+        "@angular/router": "3.2.3",
+        "angular-in-memory-web-api": "^0.1.17",
+        "angular2-jwt": "^0.1.24",
+        "angular2-materialize": "^6.3.0",
+        "angular2-moment": "^1.1.0",
+        "core-js": "^2.4.1",
+        "cors": "^2.8.1",
+        "express": "^4.14.0",
+        "express-jwt": "^5.1.0",
+        "jquery": "^2.2.4",
+        "materialize-css": "^0.97.8",
+        "rxjs": "5.0.0-beta.12",
+        "ts-helpers": "^1.1.1",
+        "zone.js": "^0.6.23",
+        "@angular/compiler-cli": "2.2.3",
+        "angular-cli": "1.0.0-beta.22-1"
+    },
+    "devDependencies": {
+        "@angular/compiler-cli": "2.2.3",
+        "@types/jasmine": "2.5.38",
+        "@types/node": "^6.0.42",
+        "angular-cli": "1.0.0-beta.21",
+        "codelyzer": "~2.0.0-beta.1",
+        "concurrently": "^3.1.0",
+        "gulp": "^3.9.0",
+        "gulp-zip": "^3.0.2",
+        "http-server": "^0.9.0",
+        "jasmine-core": "2.5.2",
+        "jasmine-spec-reporter": "2.5.0",
+        "karma": "1.2.0",
+        "karma-chrome-launcher": "^2.0.0",
+        "karma-cli": "^1.0.1",
+        "karma-jasmine": "^1.0.2",
+        "karma-remap-istanbul": "^0.2.1",
+        "lite-server": "^2.2.0",
+        "minimist": "^1.2.0",
+        "node-sass": "^4.3.0",
+        "protractor": "4.0.9",
+        "ts-node": "1.2.1",
+        "tslint": "^4.0.2",
+        "typescript": "~2.0.3",
+        "webdriver-manager": "10.2.5"
+    }
 }

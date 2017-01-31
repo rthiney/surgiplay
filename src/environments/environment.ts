@@ -7,7 +7,7 @@ export const environment = {
   production: false
 };
 export const api = {
-  url: 'http://surgiapi.azurewebsites.net/'
+  url: 'https://surgiapi.azurewebsites.net/'
 };
 
 interface AuthConfiguration {
