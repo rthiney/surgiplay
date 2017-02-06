@@ -1,4 +1,4 @@
 ## Build Status
-[ ![Codeship Status for rthiney/surgiweb](https://app.codeship.com/projects/598eb7c0-c5a9-0134-b344-5e1bd76d6753/status?branch=master)](https://app.codeship.com/projects/198357)
+[ ![Build Status for Api and Web](https://surgipalcode.visualstudio.com/_apis/public/build/definitions/97eaf0f4-0822-47c7-a559-a2dfcb75e761/18/badge)](https://portal.azure.com/#resource/subscriptions/108bea1d-742b-48bb-b5aa-4a36aa9b66ae/resourcegroups/SurgiPalResourceGroup/providers/Microsoft.Web/sites/surgipal/vstscd)
 
  
