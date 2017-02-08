@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
-import { ProfileComponent } from './profile';  
+import { ProfileComponent } from './profile';
 import { StaffComponent } from './staff/staff.component';
 import { HospitalsComponent } from './hospitals/hospitals.component';
 import { SurgeriesComponent } from './surgeries/surgeries.component';
@@ -24,7 +24,7 @@ const routes: Routes = [
     { path: 'surgeries', component: SurgeriesComponent , canActivate: [AuthGuard]},
     { path: 'hospitals', component: HospitalsComponent, canActivate: [AuthGuard] },
   { path: 'glove-size', component: GloveSizeComponent },
-   { path: 'gown-size', component: GownSizeComponent } 
+   { path: 'gown-size', component: GownSizeComponent }
 ];
 
 @NgModule({
