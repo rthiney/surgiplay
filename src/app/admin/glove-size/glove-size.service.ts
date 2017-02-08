@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 export class GloveSizeService {
  private headers = new Headers({'Content-Type': 'application/json'});
   private url =api.url + '/api/GloveSizes';  // URL to web api
-    
+
   constructor(private http: Http) { }
   getAll(): Promise<GloveSize[]> {
     console.log("Geting Gloves");

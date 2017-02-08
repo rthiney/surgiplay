@@ -1,17 +1,17 @@
- 
+
 import { AuthGuard } from './shared/auth-guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
- import { AuthHttp, AuthConfig } from 'angular2-jwt'; 
+ import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import {MaterializeDirective} from 'angular2-materialize';
- 
-import { AppRoutingModule } from './app-routing.module'; 
+
+import { AppRoutingModule } from './app-routing.module';
  import { AppComponent } from './app.component';
 
 import { AboutComponent } from './about';
-import { ProfileComponent } from './profile'; 
+import { ProfileComponent } from './profile';
 import { GloveSizeComponent, GownSizeComponent } from './admin';
 import { NoContentComponent } from './no-content';
 import { HomeComponent } from './home';
@@ -33,16 +33,16 @@ import { DataService } from './shared';
 //PRIMNG
 // import {MomentModule} from 'angular2-moment';
 //  import {TooltipModule} from 'primeng/primeng';
-//  import {CalendarModule} from 'primeng/primeng'; 
+//  import {CalendarModule} from 'primeng/primeng';
 @NgModule({
   declarations: [
       MaterializeDirective,
     AppComponent,
-    HomeComponent, 
+    HomeComponent,
     AboutComponent,
-    ProfileComponent, 
+    ProfileComponent,
      GloveSizeComponent,
-    GownSizeComponent, 
+    GownSizeComponent,
     ParamDropdownComponent,
     HomeComponent,
     NoContentComponent,
@@ -55,13 +55,13 @@ import { DataService } from './shared';
 
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     FormsModule,
-    HttpModule, 
+    HttpModule,
     //     MomentModule,
     // TooltipModule,
     // CalendarModule,
-    AppRoutingModule 
+    AppRoutingModule
   ],
   providers: [
     {

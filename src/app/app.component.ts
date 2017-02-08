@@ -1,9 +1,9 @@
- 
+
 import { Component, NgZone } from '@angular/core';
 import { Location } from '@angular/common';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
 import { Router } from '@angular/router';
-import { Auth }              from './shared/auth.service';  
+import { Auth }              from './shared/auth.service';
  import {MaterializeDirective} from 'angular2-materialize';
 declare var Auth0Lock;
 
@@ -44,7 +44,7 @@ export class AppComponent {
       });
     });
   }
- 
+
 //   login() {
 //     let self = this;
 //     this.lock.show((err: string, profile: string, id_token: string) => {

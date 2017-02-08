@@ -26,18 +26,18 @@ export class GloveSizeComponent implements OnInit {
     console.log('Sumbitted Form ! ', this.model.name);
     this.submitted = true;
     this._service.create(this.model.name).then(data => {
-      // this._service.announceChange(1212); 
+      // this._service.announceChange(1212);
        this._service.getAll().then(planets => this.params = planets);
     });
   }
-  onUpdate(elem) { 
+  onUpdate(elem) {
     this._service.update(elem).then(data => {
        this._service.getAll().then(planets => this.params = planets);
     });
   }
-  onDelete(elem: number) { 
+  onDelete(elem: number) {
     this._service.delete(elem).then(data => {
-         this._service.getAll().then(planets => this.params = planets); 
+         this._service.getAll().then(planets => this.params = planets);
     });
   }
 }
