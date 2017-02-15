@@ -1,4 +1,6 @@
-export class Param {
-    id: number;
-    name: string;
+ 
+export class Param { 
+  constructor(
+    public id: number,
+    public name: string) { }
 }
