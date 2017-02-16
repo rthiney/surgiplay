@@ -15,10 +15,10 @@
     },
     "angular-cli": {},
     "scripts": {
-        "start2": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+        "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
         "docker-build": "docker build -t surgipalsite .",
         "docker": "npm run docker-build && docker run -it --rm -p 3000:3000 -p 3001:3001 surgipalsite",
-        "start": "ng serve -prod",
+        "start2": "ng serve -prod",
         "build": "ng build",
         "lint": "tslint \"src/**/*.ts\"",
         "test": "ng test",
@@ -52,9 +52,7 @@
         "core-js": "^2.4.1",
         "cors": "^2.8.1",
         "express": "^4.14.0",
-        "express-jwt": "^5.1.0",
-        "jquery": "^2.2.4",
-        "materialize-css": "^0.97.8",
+        "express-jwt": "^5.1.0", 
         "rxjs": "5.0.0-beta.12",
         "ts-helpers": "^1.1.1",
         "zone.js": "^0.6.23"
