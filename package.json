@@ -84,6 +84,5 @@
         "tslint": "^4.0.2",
         "typescript": "~2.0.3",
         "webdriver-manager": "10.2.5"
-    }
->>>>>>> 90f5d60fc83e458a2ac88d64b82ea23092db96f6
+    } 
 }
